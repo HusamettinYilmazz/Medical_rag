@@ -31,3 +31,15 @@ run the system from main.py
 ```bash 
 python3 main.py
 ```
+
+# Approach 
+## model choice, trade-offs, what you'd change with more time.
+
+1. I would invest more time understanding the data (required domain knowladge) and the hall system
+
+2. I made some basic choices I would investagte more in evaluation metrics and their meaning to bussiness (since our metrics are proxy metrics not direct metrics)
+
+3. I tried as much as I can to write clean code but since it is required to finish the system in 3-4 hours I decided to not spend much time in code orgnization (Maybe It's ok for an assessment but nor for production)
+
+4. 
+
