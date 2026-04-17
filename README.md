@@ -77,7 +77,7 @@ the system isn't hard but some details needs time like evaluation part.
 # Scenario Question
 > Your team needs to benchmark a 70B open-source LLM for medical QA. Your usual GPU provider doesn't have L40S available today. Your manager is busy all day. Results needed by end of week.
 
-## What do you do? Be specific — platforms, alternatives, trade-offs.
+### What do you do? Be specific — platforms, alternatives, trade-offs.
 
 1. If we are allowed to use any paltform, I will use vast.ai they provide cheap GPU
 
