@@ -56,7 +56,7 @@ So we can say it is Emprical result
 k is a smoothing constant 
 - small k let top ranks dominates:
 At K=0 
-one document ranked first in one list will dominate all other documents even we have a document ranked 2 in multiple lists) 
+one document ranked first in one list will dominate all other documents even if we have a document ranked 2 in multiple lists
 
 - large k like k=1000 ignores the exact rank and cares more about wheter the item appears in multiple lists
 
@@ -69,7 +69,7 @@ addin to different scales like unbounded BM25  and bounded cosine similarity (0-
 
 
 # Evaluation
-To tell the truth I used what ever chatgpt suggested me I didn't work that much over NLP evaluation before, so I don't have that much knowladge [I can write chatgpt's answer for this question :) ]
+To tell the truth I used what ever chatgpt suggested me I didn't work that much over NLP evaluation before, so I don't have that much knowladge
 
 # Hardest problem
 the system isn't hard but some details needs time like evaluation part.
