@@ -12,6 +12,11 @@ class Settings(BaseSettings):
 
     EMBEDDING_MODEL:str
     
+    LLM_BASE_URL: str
+    LLM_API_KEY: str
+
+    RAG_MODEL: str
+
     class Config:
         env_file = ".env"
 
