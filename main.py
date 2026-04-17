@@ -14,6 +14,8 @@ from services.rrf_service import RRFService
 
 from evals.eval import Evaluator
 
+from rag.rag_service import RAGService
+from services.llm_service import LLMService
 
 from utils.config import get_settings
 settings = get_settings()
@@ -134,6 +136,28 @@ def run_evaluation(retriever):
     for r in results:
         logger.info(r)
 
+def run_rag_demo(retriever):
+    logger.info("Running RAG demo")
+
+    llm = LLMService(settings.RAG_MODEL)
+    rag = RAGService(retriever, llm)
+
+    test_query = "What are the latest guidelines for managing type 2 diabetes?"
+
+    result = rag.answer(
+        test_query,
+        RetrievalMethod.HYBRID
+    )
+
+    logger.info("\n=== RAG OUTPUT ===")
+    logger.info(f"Query: {result['query']}")
+    logger.info("\nAnswer:\n")
+    logger.info(result["answer"])
+
+    logger.info("\nRetrieved docs:")
+    for d in result["retrieved_docs"][:3]:
+        logger.info(f"- {d['article'].title} | PMID: {d['article'].pmid}")
+
 def main():
     logger.info("Starting Medical RAG Pipeline")
 
@@ -149,8 +173,26 @@ def main():
     # 4. Run evaluation
     run_evaluation(retriever)
 
+    run_rag_demo(retriever)
+
     logger.info("Pipeline completed successfully")
+
 
 
 if __name__ == "__main__":
     main()
+
+"""
+Write Inital README
+
+
+what do I still have:
+    1. Evaluation metrics selection
+        - high values I got
+        - what metrics can be better
+    
+    2. Paper at part 2C
+
+    3. LLM Factory If I have time
+
+"""
