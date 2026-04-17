@@ -6,6 +6,11 @@ class Settings(BaseSettings):
     RETMAX: int
     ARTICLES_OUTPUT_PATH: str
 
+
+    DEFAULT_RETRIEVAL_METHOD: str
+    RETRIEVAL_METHOD: str
+
+    EMBEDDING_MODEL:str
     
     class Config:
         env_file = ".env"
